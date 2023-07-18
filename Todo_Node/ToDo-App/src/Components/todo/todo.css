@@ -1,0 +1,59 @@
+.createmain-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.createmain{
+    border: 1px solid black;
+    width: 470px;
+    margin-top: 155px;
+    padding: 15px;
+}
+.user{
+    display: flex;
+    justify-content: end;
+}
+
+.h1main{
+    display: flex;
+    justify-content: center;
+    color: #0000ffa1;
+}
+
+.createTask{
+    display: flex;
+    justify-content: center;
+}
+.createform{
+    margin-right: 5px;
+}
+
+.field{
+    width: 280px;
+    height : 25px;
+    border-radius: 4px;
+}
+.button1{
+    color: white;
+    background: #0000ffa1;
+    border-radius: 5px;
+    right: 554px;
+    top: 280px;
+    height: 32px;
+}
+
+.overdue p{
+    color: blue;
+    font-weight: bold;
+}
+.Completed{
+    color: blue;
+    font-weight: bold
+}
+
+.user>button{
+    border-radius: 7px;
+    margin-left: 15px;
+    height: 30px;
+    cursor: pointer;
+}

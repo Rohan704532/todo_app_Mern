@@ -1,0 +1,14 @@
+.cartProduct{
+    text-decoration: line-through;
+    display: flex;
+    justify-content: space-between;
+}
+.cartProduct1{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointer{
+    cursor: pointer;
+}

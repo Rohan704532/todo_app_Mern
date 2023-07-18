@@ -1,0 +1,77 @@
+import React, { useState } from 'react';
+import { Formik, Form, Field } from 'formik'
+import * as Yup from "yup"
+import loginDetails from "../../login_Details.json";
+import "./todo.css"
+
+function Todo() {
+    const CreateSchema = Yup.object().shape({
+        Task: Yup.string().required("It cannot be blank").max(15, 'Task name is too long'),
+        Deadline: Yup.string().required("It cannot be blank"),
+        Description: Yup.string().required('It cannot be blank').min(5, 'It cannot be less than 5'),
+    })
+    const [messages, setMessage] = useState({
+        Task: '',
+        Deadline: '',
+        Description: '',
+        Tags: '',
+    });
+
+    const handleTaskSubmit = async (e) => {
+        console.log(messages);
+    };
+
+    function handleChange(e) {
+        e.preventDefault();
+        const { name, value } = e.target;
+        setMessage({ ...messages, [name]: value });
+        console.log(messages)
+    };
+
+    return (
+        <div className='createmain-flex' >
+            <div className='createmain'>
+                <div className='user'>
+                    {loginDetails.email}
+                    <button>Log Out</button>
+                </div>
+                <div>
+                    <h1 className='h1main'>Create Task</h1>
+                    <Formik>
+                        {({ errors, touched }) => (
+                            <Form className='createform'>
+                                <label>
+                                    Task
+                                </label>
+                                <Field onChange={handleChange} name='Task' className='field' ></Field>
+                                {errors.Task && touched.Task ? <div>{errors.Task}</div> : null}
+                                <label>
+                                    Deadline
+                                </label>
+                                <Field onChange={handleChange} name='Deadline' className='field'></Field>
+                                <label>
+                                    Description
+                                </label>
+                                <Field onChange={handleChange} name='Description' className='field' type='textarea'></Field>
+                                <label>
+                                    <Field type="checkbox" name="checked" value="priority" />
+                                    Priority
+                                </label>
+                                <label>
+                                    Tags
+                                </label>
+                                <Field onChange={handleChange} name='Tags' className='field'></Field>
+                            </Form>
+                        )}
+                    </Formik>
+                </div>
+                <div className='divform'>
+                    <button onClick={handleTaskSubmit} type='submit' className='button1'>Submit</button>
+                    <button className='button2' >Cancel</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Todo;

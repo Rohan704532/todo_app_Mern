@@ -1,0 +1,55 @@
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 215px;
+}
+
+.login-form{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 505px;
+}
+.ToDo{
+    display: flex;
+    justify-content: center;
+    background-color: #0000ff42;
+    margin-bottom: 20px;
+}
+
+#email{
+    border-radius: 5px;
+    height: 25px;
+    width: 357px;
+}
+
+#password{
+    border-radius: 5px;
+    height: 25px;
+    width: 360px;
+}
+
+.form-flex{
+    margin: 5px 0px;
+    display: flex;
+    justify-content: center;
+}
+#button{
+    width: 80px;
+    background-color: #0000ff42;
+    height: 33px;
+    border-radius: 5px;
+    margin: 00px 5px;
+}
+#button1{
+    width: 80px;
+    background-color: #0000ff42;
+    height: 33px;
+    border-radius: 5px;
+    margin: 00px 5px;
+}
+
+.sort{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
